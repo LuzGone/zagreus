@@ -1,5 +1,6 @@
 package br.edu.ifpb.pdm.zagreus
 
+import android.util.Log
 import kotlin.random.Random
 
 const val MINIMO = 1
@@ -14,29 +15,39 @@ class JogoDoBicho {
 
     constructor(){
         this.bichoSorteado = Random.nextInt(MINIMO,MAXIMO+1)
+        Log.d("STATUS",this.bichoSorteado.toString())
         this.status = "JOGANDO"
     }
 
     fun jogar (palpiteDoJogador:Int) : String{
-        if(palpiteDoJogador<this.intervaloMinimo || palpiteDoJogador>this.intervaloMaximo){
-            this.status = "DERROTA"
-            return "PERDEU"
-        }
-        if(palpiteDoJogador==this.bichoSorteado){
-            this.status = "VITORIA"
-            return "GANHOU"
-        }
-        if(this.intervaloMinimo == this.intervaloMaximo) {
-            this.status = "DERROTA"
-            return "PERDEU"
-        }
-        if(palpiteDoJogador>this.bichoSorteado){
-            this.intervaloMaximo = palpiteDoJogador
-            return "ERROU"
+        if(this.status == "JOGANDO"){
+            if(palpiteDoJogador<this.intervaloMinimo || palpiteDoJogador>this.intervaloMaximo){
+                this.status = "DERROTA"
+                return "PERDEU"
+            }
+            if(palpiteDoJogador==this.bichoSorteado){
+                this.status = "VITORIA"
+                return "GANHOU"
+            }
+            if(palpiteDoJogador>this.bichoSorteado){
+                this.intervaloMaximo = palpiteDoJogador - 1
+                if(this.intervaloMinimo == this.intervaloMaximo) {
+                    this.status = "DERROTA"
+                    return "PERDEU"
+                }
+                return "ERROU"
+            }else{
+                this.intervaloMinimo = palpiteDoJogador + 1
+                if(this.intervaloMinimo == this.intervaloMaximo) {
+                    this.status = "DERROTA"
+                    return "PERDEU"
+                }
+                return "ERROU"
+            }
         }else{
-            this.intervaloMinimo = palpiteDoJogador
-            return "ERROU"
+            return this.status
         }
+
     }
 
     fun reiniciar(){
@@ -44,6 +55,7 @@ class JogoDoBicho {
         this.intervaloMinimo = MINIMO
         this.intervaloMaximo = MAXIMO
         this.status = "JOGANDO"
+        Log.d("STATUS",this.bichoSorteado.toString())
     }
 
     fun getStatus():String{

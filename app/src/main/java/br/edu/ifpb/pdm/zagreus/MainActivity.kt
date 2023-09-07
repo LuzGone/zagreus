@@ -31,23 +31,30 @@ class MainActivity : AppCompatActivity() {
         this.entrada = this.findViewById(R.id.entrada)
 
         this.botao.setOnClickListener({ cliqueDoBotao(it)})
+        this.tvStatus.setOnLongClickListener({cliqueLongoDoStatus(it)})
 
 
     }
 
     fun cliqueDoBotao(view:View){
         this.palpiteDoJogador = this.entrada.text.toString()
-        if(this.palpiteDoJogador.isNullOrEmpty() || !this.palpiteDoJogador.isDigitsOnly()){
-            this.showToast("Entrada Inválida")
-
-        }else{
-            Toast.makeText(this,"Entrada Inválida",Toast.LENGTH_SHORT).show()
+        if(this.palpiteDoJogador.isDigitsOnly()){
             this.showToast(this.jogo.jogar(this.palpiteDoJogador.toInt()))
             this.tvStatus.setText("Status do Jogo: "+ this.jogo.getStatus())
             this.tvIntervaloMinimo.setText(this.jogo.getIntervaloMinimo().toString())
             this.tvIntervaloMaximo.setText(this.jogo.getIntervaloMaximo().toString())
+        }else{
+            this.showToast("Entrada Inválida")
         }
+    }
 
+    fun cliqueLongoDoStatus(view: View): Boolean{
+        this.showToast("Reiniciando Jogo")
+        this.jogo.reiniciar()
+        this.tvStatus.setText("Status do Jogo: "+ this.jogo.getStatus())
+        this.tvIntervaloMinimo.setText(this.jogo.getIntervaloMinimo().toString())
+        this.tvIntervaloMaximo.setText(this.jogo.getIntervaloMaximo().toString())
+        return true
     }
 
     private fun showToast(message: String) {
