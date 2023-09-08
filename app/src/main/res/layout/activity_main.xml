@@ -41,8 +41,8 @@
 
     <TextView
         android:id="@+id/intervaloMinimo"
-        android:layout_width="126dp"
-        android:layout_height="68dp"
+        android:layout_width="107dp"
+        android:layout_height="61dp"
         android:fontFamily="@font/almendra_sc"
         android:text="1"
         android:textAlignment="center"
@@ -50,25 +50,25 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.398" />
 
     <TextView
         android:id="@+id/status"
-        android:layout_width="231dp"
-        android:layout_height="40dp"
+        android:layout_width="247dp"
+        android:layout_height="33dp"
         android:fontFamily="@font/almendra_sc"
         android:text="Status do Jogo: Novo Jogo"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textColor="#102C57"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        app:layout_constraintVertical_bias="0.819" />
 
     <TextView
         android:id="@+id/sinal"
@@ -88,8 +88,8 @@
 
     <TextView
         android:id="@+id/intervaloMaximo"
-        android:layout_width="126dp"
-        android:layout_height="68dp"
+        android:layout_width="104dp"
+        android:layout_height="65dp"
         android:fontFamily="@font/almendra_sc"
         android:text="100"
         android:textAlignment="center"
@@ -97,15 +97,15 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.394" />
 
     <Button
         android:id="@+id/botao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="47dp"
         android:fontFamily="@font/almendra_sc"
         android:text="Bichar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,64 +116,64 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="171dp"
-        android:layout_height="54dp"
+        android:layout_width="170dp"
+        android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584">
+        app:layout_constraintVertical_bias="0.576">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/entrada"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="57dp"
             android:fontFamily="@font/almendra_sc"
             android:hint="Digite um Número"
             android:textColor="#102C57"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="101dp"
-        android:layout_height="184dp"
+        android:layout_width="91dp"
+        android:layout_height="188dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintHorizontal_bias="0.996"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685"
+        app:layout_constraintVertical_bias="0.646"
         app:srcCompat="@drawable/wolfindress" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="101dp"
-        android:layout_height="184dp"
+        android:id="@+id/imageView5"
+        android:layout_width="91dp"
+        android:layout_height="188dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685"
+        app:layout_constraintVertical_bias="0.646"
         app:srcCompat="@drawable/wolfindress" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="159dp"
-        android:layout_height="95dp"
+        android:layout_width="130dp"
+        android:layout_height="78dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135"
+        app:layout_constraintVertical_bias="0.151"
         app:srcCompat="@drawable/wolfunderhood" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="375dp"
-        android:layout_height="118dp"
+        android:layout_width="277dp"
+        android:layout_height="102dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
