@@ -9,10 +9,10 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="306dp"
-        android:layout_height="142dp"
+        android:layout_width="296dp"
+        android:layout_height="56dp"
         android:fontFamily="@font/almendra_sc"
-        android:text="Jogo do Bicho 🐻🐯🦁"
+        android:text="Jogo do Bicho "
         android:textAlignment="center"
         android:textColor="#102C57"
         android:textSize="48sp"
@@ -24,24 +24,10 @@
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
-        android:id="@+id/titulo2"
-        android:layout_width="229dp"
-        android:layout_height="58dp"
-        android:fontFamily="@font/almendra_sc"
-        android:text="🐺"
-        android:textAlignment="center"
-        android:textColor="#102C57"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
-
-    <TextView
         android:id="@+id/subtitulo"
         android:layout_width="187dp"
         android:layout_height="55dp"
+        android:fontFamily="@font/almendra_sc"
         android:text="Adivinhe o número secreto do bicho"
         android:textAlignment="center"
         android:textColor="#102C57"
@@ -57,6 +43,7 @@
         android:id="@+id/intervaloMinimo"
         android:layout_width="126dp"
         android:layout_height="68dp"
+        android:fontFamily="@font/almendra_sc"
         android:text="1"
         android:textAlignment="center"
         android:textColor="#102C57"
@@ -70,8 +57,9 @@
 
     <TextView
         android:id="@+id/status"
-        android:layout_width="255dp"
-        android:layout_height="36dp"
+        android:layout_width="231dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/almendra_sc"
         android:text="Status do Jogo: Novo Jogo"
         android:textAlignment="textStart"
         android:textColor="#102C57"
@@ -80,12 +68,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
+        app:layout_constraintVertical_bias="0.829" />
 
     <TextView
         android:id="@+id/sinal"
         android:layout_width="106dp"
         android:layout_height="53dp"
+        android:fontFamily="@font/almendra_sc"
         android:text="~"
         android:textAlignment="center"
         android:textColor="#102C57"
@@ -101,6 +90,7 @@
         android:id="@+id/intervaloMaximo"
         android:layout_width="126dp"
         android:layout_height="68dp"
+        android:fontFamily="@font/almendra_sc"
         android:text="100"
         android:textAlignment="center"
         android:textColor="#102C57"
@@ -116,6 +106,7 @@
         android:id="@+id/botao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/almendra_sc"
         android:text="Bichar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,6 +128,7 @@
             android:id="@+id/entrada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/almendra_sc"
             android:hint="Digite um Número"
             android:textColor="#102C57"
             android:textSize="16sp" />
@@ -151,7 +143,7 @@
         app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.722"
+        app:layout_constraintVertical_bias="0.685"
         app:srcCompat="@drawable/wolfindress" />
 
     <ImageView
@@ -163,7 +155,30 @@
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.722"
+        app:layout_constraintVertical_bias="0.685"
         app:srcCompat="@drawable/wolfindress" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="159dp"
+        android:layout_height="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135"
+        app:srcCompat="@drawable/wolfunderhood" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="375dp"
+        android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/wolfmairmade" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
