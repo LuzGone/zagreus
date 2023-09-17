@@ -22,6 +22,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var palpiteDoJogador: String
     private lateinit var ultimoGanhador: TextView
 
+    private val winResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+        if(it.resultCode == RESULT_OK){
+            val nomeDoJogador = it.data?.getStringExtra("NOME_JOGADOR")
+            this.ultimoGanhador.setText("Ultimo Ganhador: ${nomeDoJogador}")
+        }
+    }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,7 +87,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun chamarTelaWin(){
         val intent = Intent(this, WinActivity::class.java)
-        startActivity(intent)
+        this.winResult.launch(intent)
     }
 
     private fun chamarTelaLose(){

@@ -23,6 +23,11 @@ class WinActivity : AppCompatActivity() {
     }
 
     private fun retornar(){
+        val nomeDoJogador = this.nomeDoJogador.text.toString()
+        val intent = Intent().apply {
+            putExtra("NOME_JOGADOR", nomeDoJogador)
+        }
+        setResult(RESULT_OK,intent)
         finish()
     }
 }
